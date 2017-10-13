@@ -36,6 +36,8 @@ void loop()
   float tvoc = sensor.readTVOC();
   if (co2 >= 65021) {
     configure();
+    co2 = 400;
+    tvoc = 0;
   } else if (co2 < 1) {
     Serial.println("Correction");
     co2 = 400;
